@@ -34,12 +34,12 @@ onMounted(() => {
 const allCats = ref<Array<Cat>>()
 
 const getCatsList = () => {
-  axios.get('/cats.json').then((res) => {
+  axios.get('/cats.json').then((res: any) => {
     allCats.value = res.data.images
   })
 }
 
-const getChosenCat = (id) => {
+const getChosenCat = (id: string) => {
   // TODO: Create a new list of the cats that got the votes based on their ID and number of times that the were chosen by the user
 }
 </script>
